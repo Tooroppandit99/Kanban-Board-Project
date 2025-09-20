@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e1e4e8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+#task-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#task-form input,
+#task-form textarea {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #c0c0c0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.add-task-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-task-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.kanban-board {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-height: 400px;
+}
+
+.column h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.task {
+    background-color: #fff;
+    border-left: 5px solid;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.task:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.task.is-dragging {
+    opacity: 0.5;
+}
+
+/* Column-specific colors for the border */
+#todo-column .task { border-left-color: #f4b400; }
+#inprogress-column .task { border-left-color: #4285f4; }
+#done-column .task { border-left-color: #0f9d58; }
+
+.task-content {
+    flex-grow: 1;
+}
+
+.task-actions {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+.task-actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: #7f8c8d;
+    transition: color 0.2s;
+}
+
+.task-actions button:hover {
+    color: #333;
+}
+
+.task-list.drag-over {
+    background-color: #d1e2f1;
+}

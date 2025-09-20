@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyzAI Kanban Board</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- root mein favicon.ico rakhne par -->
+<link rel="icon" href="/favicon.ico" />
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Kanban Board</h1>
+
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <textarea id="task-description" placeholder="Task Description"></textarea>
+            <button type="submit" class="add-task-btn">
+        <i class="fas fa-plus-circle"></i> Add Task
+    </button>
+
+        </form>
+
+        <div class="kanban-board">
+            <div class="column" id="todo-column">
+                 <h2><i class="fas fa-tasks"></i> To Do</h2>
+
+                <div class="task-list" data-status="todo"></div>
+            </div>
+            
+            <div class="column" id="inprogress-column">
+                <h2><i class="fas fa-spinner"></i> In Progress</h2>
+
+                <div class="task-list" data-status="inprogress"></div>
+            </div>
+            
+            <div class="column" id="done-column">
+                <h2><i class="fas fa-check-circle"></i> Done</h2>
+
+                <div class="task-list" data-status="done"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js" type="module"></script>
+
+
+</body>
+</html>
+
+
