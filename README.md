@@ -20,8 +20,6 @@ Create and View Cards: Create a card for each task with a title and a descriptio
      The code is organized into separate files (main.js, storage.js, task.js) for better readability and maintainability.
      This keeps the code clean and reusable.
 
-# ---
-
 ### File Structure-
 
   index.html: The main HTML file that provides the structure of the board.
